@@ -1091,7 +1091,7 @@ section {
     position: absolute;
     top: 1.5rem;
     right: 1.5rem;
-    background: rgba(139, 92, 246, 0.15);
+    background: transparent;
     border: none;
     border-radius: 8px;
     padding: 0.5rem;
@@ -1103,22 +1103,19 @@ section {
 }
 
 .bio-copy-btn:hover {
-    background: rgba(139, 92, 246, 0.25);
+    background: transparent;
 }
 
 .bio-copy-btn svg {
-    stroke: #FFFFFF;
+    stroke: var(--accent-purple);
     stroke-width: 2.5;
-    filter: drop-shadow(0 0 8px rgba(139, 92, 246, 1)) 
-            drop-shadow(0 0 4px rgba(255, 255, 255, 0.8));
+    fill: none;
     transition: all 0.3s ease;
 }
 
 .bio-copy-btn:hover svg {
     stroke: var(--accent-cyan);
     stroke-width: 2.5;
-    filter: drop-shadow(0 0 12px rgba(34, 211, 238, 1)) 
-            drop-shadow(0 0 6px rgba(34, 211, 238, 0.8));
 }
 
 .bio-text {
@@ -1273,6 +1270,211 @@ section {
     color: var(--accent-cyan);
 }
 
+/* ============================================
+   COURSE REVIEWS TESTIMONIALS SECTION
+   ============================================ */
+
+.course-reviews-container {
+    max-width: 1400px;
+    margin: 6rem auto 0;
+    padding: 0 2rem;
+}
+
+.course-reviews-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.course-reviews-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    letter-spacing: -0.03em;
+}
+
+.course-reviews-subtitle {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+/* Carousel Container */
+.testimonials-carousel {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    padding: 0 4rem;
+}
+
+.testimonials-track {
+    display: flex;
+    gap: 2rem;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 1rem 0;
+}
+
+/* Testimonial Card */
+.testimonial-card {
+    flex: 0 0 calc(33.333% - 1.5rem);
+    min-width: 350px;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 2.5rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+}
+
+.testimonial-card::before {
+    content: '"';
+    position: absolute;
+    top: 1.5rem;
+    left: 2rem;
+    font-size: 4rem;
+    color: var(--accent-purple);
+    opacity: 0.2;
+    font-family: Georgia, serif;
+    line-height: 1;
+}
+
+.testimonial-card:hover {
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-8px);
+    box-shadow: 
+        0 0 40px rgba(139, 92, 246, 0.3),
+        0 0 80px rgba(34, 211, 238, 0.2),
+        0 16px 48px rgba(0, 0, 0, 0.4);
+}
+
+.testimonial-quote {
+    font-size: 1.0625rem;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.author-images {
+    display: flex;
+    align-items: center;
+}
+
+.author-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    object-fit: cover;
+}
+
+.author-info {
+    flex: 1;
+}
+
+.author-name {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
+}
+
+.author-title {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+}
+
+/* Carousel Navigation Buttons */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 10;
+    color: var(--text-primary);
+}
+
+.carousel-btn:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.25);
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 8px 24px rgba(139, 92, 246, 0.4);
+}
+
+.carousel-btn:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
+.carousel-btn-prev {
+    left: 0;
+}
+
+.carousel-btn-next {
+    right: 0;
+}
+
+.carousel-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.carousel-btn:disabled:hover {
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+/* Carousel Dots Navigation */
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 2rem;
+}
+
+.carousel-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 0;
+}
+
+.carousel-dot:hover {
+    background: rgba(255, 255, 255, 0.4);
+    transform: scale(1.2);
+}
+
+.carousel-dot.active {
+    background: var(--accent-purple);
+    width: 24px;
+    border-radius: 4px;
+}
+
 /* Animations */
 @keyframes fadeInUp {
     from {
@@ -1295,6 +1497,17 @@ section {
 }
 
 /* Responsive Design */
+@media (max-width: 1200px) {
+    .testimonial-card {
+        flex: 0 0 calc(50% - 1rem);
+        min-width: 320px;
+    }
+    
+    .course-reviews-title {
+        font-size: 2.5rem;
+    }
+}
+
 @media (max-width: 1024px) {
     .hero .container {
         grid-template-columns: 1fr;
@@ -1409,6 +1622,28 @@ section {
         flex-direction: column;
         text-align: center;
     }
+    
+    .testimonial-card {
+        flex: 0 0 100%;
+        min-width: 280px;
+    }
+    
+    .course-reviews-title {
+        font-size: 2rem;
+    }
+    
+    .course-reviews-subtitle {
+        font-size: 1rem;
+    }
+    
+    .testimonials-carousel {
+        padding: 0 3rem;
+    }
+    
+    .carousel-btn {
+        width: 40px;
+        height: 40px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1432,5 +1667,29 @@ section {
     .code-block {
         font-size: 0.75rem;
         padding: 1rem;
+    }
+    
+    .testimonials-carousel {
+        padding: 0;
+    }
+    
+    .carousel-btn {
+        display: none;
+    }
+    
+    .testimonials-track {
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+    
+    .testimonials-track::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .testimonial-card {
+        scroll-snap-align: center;
     }
 }
