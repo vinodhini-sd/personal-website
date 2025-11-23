@@ -565,3 +565,50 @@ document.addEventListener('DOMContentLoaded', function() {
     reviewsObserver.observe(carousel);
 });
 
+// FOOTER SPOTLIGHT EFFECT
+const footerSpotlight = document.querySelector('.footer-spotlight');
+const footerHeroText = document.querySelector('.footer-hero-text');
+
+if (footerSpotlight && footerHeroText) {
+    footerSpotlight.addEventListener('mousemove', (e) => {
+        const rect = footerSpotlight.getBoundingClientRect();
+        const x = ((e.clientX - rect.left) / rect.width) * 100;
+        const y = ((e.clientY - rect.top) / rect.height) * 100;
+        
+        footerHeroText.style.setProperty('--x', `${x}%`);
+        footerHeroText.style.setProperty('--y', `${y}%`);
+    });
+    
+    // Reset to center when mouse leaves
+    footerSpotlight.addEventListener('mouseleave', () => {
+        footerHeroText.style.setProperty('--x', '50%');
+        footerHeroText.style.setProperty('--y', '50%');
+    });
+}
+
+// VIEW MORE EXPERIENCE FUNCTIONALITY
+const viewMoreBtn = document.getElementById('viewMoreBtn');
+const hiddenExperiences = document.querySelectorAll('.hidden-experience');
+
+if (viewMoreBtn && hiddenExperiences.length > 0) {
+    viewMoreBtn.addEventListener('click', () => {
+        // Show hidden experiences with animation
+        hiddenExperiences.forEach((item, index) => {
+            setTimeout(() => {
+                item.classList.add('show');
+                // Trigger visibility animation
+                setTimeout(() => {
+                    item.classList.add('visible');
+                }, 50);
+            }, index * 100);
+        });
+        
+        // Hide the button with fade out
+        viewMoreBtn.style.opacity = '0';
+        viewMoreBtn.style.transform = 'translateY(-10px)';
+        setTimeout(() => {
+            viewMoreBtn.style.display = 'none';
+        }, 300);
+    });
+}
+
