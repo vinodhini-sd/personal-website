@@ -586,6 +586,8 @@ if (footerSpotlight && footerHeroText) {
     });
 }
 
+// Hero image is styled with CSS gradient fade at the bottom
+
 // VIEW MORE EXPERIENCE FUNCTIONALITY
 const viewMoreBtn = document.getElementById('viewMoreBtn');
 const hiddenExperiences = document.querySelectorAll('.hidden-experience');
