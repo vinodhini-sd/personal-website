@@ -1409,19 +1409,39 @@ section {
     background: var(--bg-primary);
 }
 
-.bio-simple-content {
+.bio-content {
     max-width: 800px;
     margin: 3rem auto 0;
-    text-align: left;
 }
 
-.bio-simple-content p {
+.bio-text {
     color: var(--text-secondary);
     font-size: 1.125rem;
     line-height: 1.8;
     margin-bottom: 1.5rem;
 }
 
-.bio-simple-content .btn {
-    margin-top: 1.5rem;
+.bio-actions {
+    margin-top: 2.5rem;
+    display: flex;
+    gap: 1rem;
+}
+
+@media (max-width: 768px) {
+    .bio-content {
+        max-width: 100%;
+    }
+    
+    .bio-text {
+        font-size: 1rem;
+    }
+    
+    .bio-actions {
+        flex-direction: column;
+    }
+    
+    .bio-actions .btn {
+        width: 100%;
+        justify-content: center;
+    }
 }
