@@ -1444,11 +1444,7 @@ section {
 }
 
 .bio-copy-btn svg {
-    stroke: var(--accent-purple);
-}
-
-.bio-copy-btn:hover svg {
-    stroke: var(--accent-blue);
+    stroke: #8B5CF6;
 }
 
 .bio-text {
