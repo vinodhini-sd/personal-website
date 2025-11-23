@@ -1090,27 +1090,33 @@ section {
     position: absolute;
     top: 1.5rem;
     right: 1.5rem;
-    background: transparent;
-    border: none;
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.15), rgba(59, 130, 246, 0.15));
+    border: 1px solid rgba(139, 92, 246, 0.3);
     border-radius: 8px;
     padding: 0.5rem;
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: all 0.3s ease;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .bio-copy-btn:hover {
-    background: rgba(139, 92, 246, 0.1);
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.25), rgba(59, 130, 246, 0.25));
+    border-color: rgba(139, 92, 246, 0.5);
+    box-shadow: 
+        0 0 20px rgba(139, 92, 246, 0.4),
+        0 0 40px rgba(59, 130, 246, 0.2);
 }
 
 .bio-copy-btn svg {
-    stroke: var(--text-primary);
+    stroke: var(--accent-purple);
+    filter: drop-shadow(0 0 2px rgba(139, 92, 246, 0.5));
 }
 
 .bio-copy-btn:hover svg {
-    stroke: var(--accent-purple);
+    stroke: var(--accent-cyan);
+    filter: drop-shadow(0 0 4px rgba(34, 211, 238, 0.8));
 }
 
 .bio-text {
@@ -1128,6 +1134,7 @@ section {
     margin-top: 2.5rem;
     display: flex;
     gap: 1rem;
+    justify-content: center;
 }
 
 /* Education Section */
