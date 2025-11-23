@@ -770,24 +770,10 @@ section {
 .skill-category:hover {
     border-color: var(--border-hover);
     transform: translateY(-4px) scale(1);
-}
-
-.skill-category::before {
-    content: '';
-    position: absolute;
-    inset: -0.5rem;
-    border-radius: 12px;
-    padding: 0.5rem;
-    background: linear-gradient(135deg, var(--glow-purple), var(--glow-blue));
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.skill-category:hover::before {
-    opacity: 1;
+    box-shadow: 
+        0 0 30px rgba(139, 92, 246, 0.3),
+        0 0 60px rgba(59, 130, 246, 0.2),
+        0 8px 24px rgba(0, 0, 0, 0.3);
 }
 
 .skill-category-title {
@@ -876,24 +862,10 @@ section {
 .speaking-card:hover {
     border-color: var(--border-hover);
     transform: translateY(-4px);
-}
-
-.speaking-card::before {
-    content: '';
-    position: absolute;
-    inset: -0.5rem;
-    border-radius: 12px;
-    padding: 0.5rem;
-    background: linear-gradient(135deg, var(--glow-blue), var(--glow-cyan));
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.speaking-card:hover::before {
-    opacity: 1;
+    box-shadow: 
+        0 0 30px rgba(59, 130, 246, 0.3),
+        0 0 60px rgba(34, 211, 238, 0.2),
+        0 8px 24px rgba(0, 0, 0, 0.3);
 }
 
 .speaking-icon {
@@ -966,24 +938,10 @@ section {
 .writing-card:hover {
     border-color: var(--border-hover);
     transform: translateY(-4px);
-}
-
-.writing-card::before {
-    content: '';
-    position: absolute;
-    inset: -0.5rem;
-    border-radius: 12px;
-    padding: 0.5rem;
-    background: linear-gradient(135deg, var(--glow-purple), var(--glow-cyan));
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.writing-card:hover::before {
-    opacity: 1;
+    box-shadow: 
+        0 0 30px rgba(139, 92, 246, 0.3),
+        0 0 60px rgba(34, 211, 238, 0.2),
+        0 8px 24px rgba(0, 0, 0, 0.3);
 }
 
 .writing-icon {
@@ -1060,24 +1018,10 @@ section {
 .teaching-card:hover {
     border-color: var(--border-hover);
     transform: translateY(-4px);
-}
-
-.teaching-card::before {
-    content: '';
-    position: absolute;
-    inset: -0.5rem;
-    border-radius: 12px;
-    padding: 0.5rem;
-    background: linear-gradient(135deg, var(--glow-blue), var(--glow-cyan));
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.teaching-card:hover::before {
-    opacity: 1;
+    box-shadow: 
+        0 0 30px rgba(59, 130, 246, 0.3),
+        0 0 60px rgba(34, 211, 238, 0.2),
+        0 8px 24px rgba(0, 0, 0, 0.3);
 }
 
 .teaching-icon {
@@ -1258,24 +1202,10 @@ section {
 .contact-card:hover {
     border-color: var(--border-hover);
     transform: translateY(-8px);
-}
-
-.contact-card::before {
-    content: '';
-    position: absolute;
-    inset: -0.5rem;
-    border-radius: 12px;
-    padding: 0.5rem;
-    background: linear-gradient(135deg, var(--glow-purple), var(--glow-cyan));
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.contact-card:hover::before {
-    opacity: 1;
+    box-shadow: 
+        0 0 30px rgba(139, 92, 246, 0.3),
+        0 0 60px rgba(34, 211, 238, 0.2),
+        0 12px 32px rgba(0, 0, 0, 0.3);
 }
 
 .contact-icon {
