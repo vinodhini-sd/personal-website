@@ -152,19 +152,19 @@ window.addEventListener('scroll', () => {
 });
 
 // Code block typing animation - lines appear one by one
-const codeContent = document.querySelector('.code-content');
-if (codeContent) {
+const codeContents = document.querySelectorAll('.code-content');
+codeContents.forEach(codeContent => {
     const codeLines = codeContent.querySelectorAll('.code-line');
     codeLines.forEach((line, index) => {
         line.style.opacity = '0';
-        line.style.transform = 'translateX(-10px)';
+        line.style.transform = 'translateX(-20px)';
         setTimeout(() => {
-            line.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+            line.style.transition = 'opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1), transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)';
             line.style.opacity = '1';
             line.style.transform = 'translateX(0)';
-        }, index * 50 + 300);
+        }, index * 80 + 800);
     });
-}
+});
 
 // Smooth cursor glow effect (optional - adds visual polish)
 document.addEventListener('mousemove', (e) => {
