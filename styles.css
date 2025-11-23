@@ -1457,6 +1457,7 @@ section {
     margin-top: 2.5rem;
     display: flex;
     gap: 1rem;
+    justify-content: center;
 }
 
 @media (max-width: 768px) {
