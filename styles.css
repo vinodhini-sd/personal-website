@@ -1414,23 +1414,22 @@ section {
     margin: 3rem auto 0;
 }
 
-.bio-text-wrapper {
+.bio-box {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 2rem;
     position: relative;
-}
-
-.bio-text {
-    color: #FFFFFF;
-    font-size: 1.125rem;
-    line-height: 1.8;
-    margin-bottom: 1.5rem;
 }
 
 .bio-copy-btn {
     position: absolute;
-    top: 0;
-    right: 0;
-    background: rgba(139, 92, 246, 0.1);
-    border: 1px solid rgba(139, 92, 246, 0.3);
+    top: 1.5rem;
+    right: 1.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 8px;
     padding: 0.5rem;
     cursor: pointer;
@@ -1441,12 +1440,27 @@ section {
 }
 
 .bio-copy-btn:hover {
-    background: rgba(139, 92, 246, 0.2);
+    background: rgba(139, 92, 246, 0.1);
     border-color: var(--accent-purple);
 }
 
 .bio-copy-btn svg {
+    stroke: var(--text-primary);
+}
+
+.bio-copy-btn:hover svg {
     stroke: var(--accent-purple);
+}
+
+.bio-text {
+    color: #FFFFFF;
+    font-size: 1.125rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.bio-text:last-child {
+    margin-bottom: 0;
 }
 
 .bio-actions {
@@ -1455,53 +1469,23 @@ section {
     gap: 1rem;
 }
 
-.btn-gradient-outline {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.75rem;
-    padding: 1rem 2rem;
-    background: transparent;
-    border: 2px solid transparent;
-    border-radius: 12px;
-    background-image: linear-gradient(var(--bg-primary), var(--bg-primary)), 
-                      linear-gradient(135deg, var(--accent-purple), var(--accent-blue));
-    background-origin: border-box;
-    background-clip: padding-box, border-box;
-    color: white;
-    font-weight: 600;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-decoration: none;
-    position: relative;
-}
-
-.btn-gradient-outline:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(139, 92, 246, 0.4);
-    background-image: linear-gradient(135deg, var(--accent-purple), var(--accent-blue)), 
-                      linear-gradient(135deg, var(--accent-purple), var(--accent-blue));
-}
-
-.btn-gradient-outline svg {
-    stroke: white;
-}
-
 @media (max-width: 768px) {
     .bio-content {
         max-width: 100%;
     }
     
-    .bio-text {
-        font-size: 1rem;
+    .bio-box {
+        padding: 1.5rem;
+        padding-top: 3rem;
     }
     
     .bio-copy-btn {
-        position: relative;
-        top: auto;
-        right: auto;
-        margin-top: 1rem;
-        width: 100%;
+        top: 1rem;
+        right: 1rem;
+    }
+    
+    .bio-text {
+        font-size: 1rem;
     }
     
     .bio-actions {
