@@ -988,81 +988,99 @@ section {
 /* Teaching Section */
 .teaching {
     background: var(--bg-primary);
-}
-
-.teaching-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.teaching-grid-two {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.teaching-card {
-    background: var(--bg-secondary);
-    padding: 2.5rem;
-    border-radius: 12px;
-    border: 1px solid var(--border-subtle);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
+    padding: 10rem 0 8rem;
 }
 
-.teaching-card:hover {
-    border-color: var(--border-hover);
-    transform: translateY(-4px);
-    box-shadow: 
-        0 0 30px rgba(59, 130, 246, 0.3),
-        0 0 60px rgba(34, 211, 238, 0.2),
-        0 8px 24px rgba(0, 0, 0, 0.3);
-}
-
-.teaching-icon {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
-}
-
-.teaching-card h3 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin-bottom: 1.5rem;
-    color: var(--text-primary);
-    letter-spacing: -0.02em;
-}
-
-.teaching-card ul {
-    list-style: none;
-    padding: 0;
-}
-
-.teaching-card ul li {
-    margin-bottom: 1.25rem;
-    line-height: 1.6;
-    color: var(--text-secondary);
-    padding-left: 1.5rem;
-    position: relative;
-}
-
-.teaching-card ul li::before {
-    content: '→';
+.teaching::before {
+    content: '';
     position: absolute;
-    left: 0;
-    color: var(--accent-cyan);
-    font-weight: bold;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(circle, var(--glow-purple) 0%, transparent 70%);
+    opacity: 0.08;
+    pointer-events: none;
 }
 
-.teaching-card ul li strong {
+.teaching-hero {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 8rem;
+    position: relative;
+    z-index: 2;
+}
+
+.teaching-hero-title {
+    font-size: 4.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.03em;
+    color: #FFFFFF;
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(135deg, #FFFFFF 0%, rgba(255, 255, 255, 0.85) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.teaching-hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 3rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.teaching-hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-teaching-primary {
+    background: rgba(255, 255, 255, 0.95);
+    color: var(--bg-primary);
+    border: 1px solid rgba(255, 255, 255, 1);
+    font-weight: 600;
+    padding: 1rem 2rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-teaching-primary:hover {
+    background: rgba(255, 255, 255, 1);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 32px rgba(255, 255, 255, 0.2);
+}
+
+.btn-teaching-primary svg {
+    margin-left: 0.25rem;
+}
+
+.btn-teaching-secondary {
+    background: transparent;
     color: var(--text-primary);
-    display: block;
-    margin-bottom: 0.25rem;
-    font-size: 0.9375rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    font-weight: 600;
+    padding: 1rem 2rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-teaching-secondary:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(139, 92, 246, 0.3);
+}
+
+.btn-teaching-secondary svg {
+    margin-left: 0.25rem;
 }
 
 /* Bio Section */
@@ -1091,10 +1109,10 @@ section {
     position: absolute;
     top: 1.5rem;
     right: 1.5rem;
-    background: rgba(255, 255, 255, 0.1);
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    border-radius: 10px;
-    padding: 0.75rem;
+    background: transparent;
+    border: none;
+    border-radius: 8px;
+    padding: 0.5rem;
     cursor: pointer;
     transition: all 0.3s ease;
     display: flex;
@@ -1103,12 +1121,11 @@ section {
 }
 
 .bio-copy-btn:hover {
-    background: rgba(139, 92, 246, 0.2);
-    border-color: var(--accent-purple);
+    background: transparent;
 }
 
 .bio-copy-btn svg {
-    stroke: #22D3EE;
+    stroke: #A78BFA;
     stroke-width: 3;
     fill: none;
     width: 24px;
@@ -1117,7 +1134,7 @@ section {
 }
 
 .bio-copy-btn:hover svg {
-    stroke: #FFFFFF;
+    stroke: #C4B5FD;
     stroke-width: 3;
 }
 
@@ -1317,6 +1334,7 @@ section {
     gap: 2rem;
     transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     padding: 1rem 0;
+    will-change: transform;
 }
 
 /* Testimonial Card */
@@ -1331,6 +1349,12 @@ section {
     padding: 2.5rem;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
+    user-select: none;
+}
+
+.testimonial-card.clone {
+    /* Cloned cards for infinite loop - styled identically */
+    pointer-events: auto;
 }
 
 .testimonial-card::before {
@@ -1441,11 +1465,13 @@ section {
 .carousel-btn:disabled {
     opacity: 0.3;
     cursor: not-allowed;
+    pointer-events: none;
 }
 
 .carousel-btn:disabled:hover {
     transform: translateY(-50%);
     background: rgba(255, 255, 255, 0.08);
+    box-shadow: none;
 }
 
 /* Carousel Dots Navigation */
@@ -1508,6 +1534,10 @@ section {
     
     .course-reviews-title {
         font-size: 2.5rem;
+    }
+    
+    .teaching-hero-title {
+        font-size: 3.5rem;
     }
 }
 
@@ -1626,6 +1656,24 @@ section {
         text-align: center;
     }
     
+    .teaching-hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .teaching-hero-subtitle {
+        font-size: 1.125rem;
+    }
+    
+    .teaching-hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .teaching-hero-buttons .btn {
+        width: 100%;
+        justify-content: center;
+    }
+    
     .testimonial-card {
         flex: 0 0 100%;
         min-width: 280px;
@@ -1670,6 +1718,14 @@ section {
     .code-block {
         font-size: 0.75rem;
         padding: 1rem;
+    }
+    
+    .teaching-hero-title {
+        font-size: 2rem;
+    }
+    
+    .teaching-hero-subtitle {
+        font-size: 1rem;
     }
     
     .testimonials-carousel {
