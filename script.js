@@ -305,6 +305,30 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+// Copy bio text to clipboard
+function copyBioText() {
+    const bioContent = document.getElementById('bio-text-content');
+    const paragraphs = bioContent.querySelectorAll('p');
+    const bioText = Array.from(paragraphs).map(p => p.textContent).join('\n\n');
+    
+    navigator.clipboard.writeText(bioText).then(() => {
+        const button = document.querySelector('.bio-copy-btn');
+        const originalHTML = button.innerHTML;
+        
+        button.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+        button.style.background = 'rgba(34, 197, 94, 0.2)';
+        button.style.borderColor = '#22c55e';
+        
+        setTimeout(() => {
+            button.innerHTML = originalHTML;
+            button.style.background = '';
+            button.style.borderColor = '';
+        }, 2000);
+    }).catch(err => {
+        console.error('Failed to copy bio text: ', err);
+    });
+}
+
 // Console message for developers
 console.log('%c👋 Hi there, developer!', 'color: #8B5CF6; font-size: 20px; font-weight: bold;');
 console.log('%cLike the Linear-style design? Let\'s connect!', 'color: #22D3EE; font-size: 14px;');

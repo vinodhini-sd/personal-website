@@ -1414,6 +1414,10 @@ section {
     margin: 3rem auto 0;
 }
 
+.bio-text-wrapper {
+    position: relative;
+}
+
 .bio-text {
     color: #FFFFFF;
     font-size: 1.125rem;
@@ -1421,10 +1425,66 @@ section {
     margin-bottom: 1.5rem;
 }
 
+.bio-copy-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: rgba(139, 92, 246, 0.1);
+    border: 1px solid rgba(139, 92, 246, 0.3);
+    border-radius: 8px;
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bio-copy-btn:hover {
+    background: rgba(139, 92, 246, 0.2);
+    border-color: var(--accent-purple);
+}
+
+.bio-copy-btn svg {
+    stroke: var(--accent-purple);
+}
+
 .bio-actions {
     margin-top: 2.5rem;
     display: flex;
     gap: 1rem;
+}
+
+.btn-gradient-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 2rem;
+    background: transparent;
+    border: 2px solid transparent;
+    border-radius: 12px;
+    background-image: linear-gradient(var(--bg-primary), var(--bg-primary)), 
+                      linear-gradient(135deg, var(--accent-purple), var(--accent-blue));
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    position: relative;
+}
+
+.btn-gradient-outline:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(139, 92, 246, 0.4);
+    background-image: linear-gradient(135deg, var(--accent-purple), var(--accent-blue)), 
+                      linear-gradient(135deg, var(--accent-purple), var(--accent-blue));
+}
+
+.btn-gradient-outline svg {
+    stroke: white;
 }
 
 @media (max-width: 768px) {
@@ -1434,6 +1494,14 @@ section {
     
     .bio-text {
         font-size: 1rem;
+    }
+    
+    .bio-copy-btn {
+        position: relative;
+        top: auto;
+        right: auto;
+        margin-top: 1rem;
+        width: 100%;
     }
     
     .bio-actions {

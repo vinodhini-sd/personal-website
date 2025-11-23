@@ -421,12 +421,22 @@
             <span class="section-label">Speaker Resources</span>
             <h2 class="section-title">Biography & Headshots</h2>
             <div class="bio-content">
-                <p class="bio-text">Vino Duraisamy is a Developer Advocate at Snowflake, where she empowers developers to build scalable data and AI solutions. With over 10 years of experience across retail, legal, and big tech companies, Vino has architected enterprise-grade data platforms and ML systems that serve millions of users.</p>
-                
-                <p class="bio-text">As a passionate advocate for developers, Vino bridges the gap between complex technology and practical implementation through speaking engagements, technical writing, and open-source contributions. She specializes in data engineering, machine learning operations, and developer experience. Vino holds a Master's degree in Business Analytics from Arizona State University (Summa Cum Laude) and a Bachelor's in Electronics and Communications from PSG College of Technology.</p>
+                <div class="bio-text-wrapper">
+                    <div id="bio-text-content">
+                        <p class="bio-text">Vino Duraisamy is a Developer Advocate at Snowflake, where she empowers developers to build scalable data and AI solutions. With over 10 years of experience across retail, legal, and big tech companies, Vino has architected enterprise-grade data platforms and ML systems that serve millions of users.</p>
+                        
+                        <p class="bio-text">As a passionate advocate for developers, Vino bridges the gap between complex technology and practical implementation through speaking engagements, technical writing, and open-source contributions. She specializes in data engineering, machine learning operations, and developer experience. Vino holds a Master's degree in Business Analytics from Arizona State University (Summa Cum Laude) and a Bachelor's in Electronics and Communications from PSG College of Technology.</p>
+                    </div>
+                    <button class="bio-copy-btn" onclick="copyBioText()" aria-label="Copy biography text">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="9" y="9" width="13" height="13" rx="2" stroke="currentColor" stroke-width="2"/>
+                            <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </button>
+                </div>
                 
                 <div class="bio-actions">
-                    <a href="assets/images/vino.JPG" download class="btn btn-primary">
+                    <a href="assets/images/vino.JPG" download class="btn btn-gradient-outline">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
