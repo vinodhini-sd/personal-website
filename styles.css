@@ -444,7 +444,6 @@ section {
 
 /* Modern Clean Glass Code Block */
 .code-block-glass {
-    background: rgba(139, 92, 246, 0.04);
     backdrop-filter: blur(30px) saturate(150%);
     -webkit-backdrop-filter: blur(30px) saturate(150%);
     border: 2px solid transparent;
@@ -454,8 +453,9 @@ section {
     font-size: 0.875rem;
     position: relative;
     margin: 2rem 0;
+    background: rgba(0, 0, 0, 0.3);
     background-image: 
-        linear-gradient(rgba(139, 92, 246, 0.04), rgba(139, 92, 246, 0.04)),
+        linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
         linear-gradient(135deg, #8B5CF6, #3B82F6, #22D3EE, #3B82F6, #8B5CF6);
     background-origin: border-box;
     background-clip: padding-box, border-box;
@@ -472,9 +472,6 @@ section {
 }
 
 .code-block-glass:hover {
-    background-image: 
-        linear-gradient(rgba(139, 92, 246, 0.08), rgba(139, 92, 246, 0.08)),
-        linear-gradient(135deg, #8B5CF6, #3B82F6, #22D3EE, #3B82F6, #8B5CF6);
     transform: translateY(-1px);
     box-shadow: 
         0 0 40px rgba(139, 92, 246, 0.5),
@@ -763,7 +760,7 @@ section {
 }
 
 .skill-category {
-    background: rgba(139, 92, 246, 0.04);
+    background: var(--bg-secondary);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     padding: 2rem;
@@ -774,7 +771,7 @@ section {
     opacity: 0;
     transform: scale(0.95);
     background-image: 
-        linear-gradient(rgba(139, 92, 246, 0.04), rgba(139, 92, 246, 0.04)),
+        linear-gradient(var(--bg-secondary), var(--bg-secondary)),
         linear-gradient(135deg, #8B5CF6, #3B82F6, #22D3EE, #3B82F6, #8B5CF6);
     background-origin: border-box;
     background-clip: padding-box, border-box;
@@ -791,9 +788,6 @@ section {
 
 .skill-category:hover {
     transform: translateY(-4px) scale(1);
-    background-image: 
-        linear-gradient(rgba(139, 92, 246, 0.08), rgba(139, 92, 246, 0.08)),
-        linear-gradient(135deg, #8B5CF6, #3B82F6, #22D3EE, #3B82F6, #8B5CF6);
     box-shadow: 
         0 0 30px rgba(139, 92, 246, 0.4),
         0 0 60px rgba(59, 130, 246, 0.3),
