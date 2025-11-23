@@ -772,7 +772,7 @@ section {
     position: absolute;
     inset: 0;
     border-radius: 16px;
-    padding: 1px;
+    padding: 1.5px;
     background: linear-gradient(135deg, #8B5CF6, #3B82F6, #22D3EE, #3B82F6, #8B5CF6);
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
