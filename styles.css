@@ -454,7 +454,7 @@ section {
     position: relative;
     margin: 2rem 0;
     background-image: 
-        linear-gradient(rgba(139, 92, 246, 0.04), rgba(139, 92, 246, 0.04)),
+        linear-gradient(transparent, transparent),
         linear-gradient(135deg, #8B5CF6, #3B82F6, #22D3EE, #3B82F6, #8B5CF6);
     background-origin: border-box;
     background-clip: padding-box, border-box;
@@ -759,7 +759,6 @@ section {
 }
 
 .skill-category {
-    background: var(--bg-secondary);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     padding: 2rem;
@@ -770,7 +769,7 @@ section {
     opacity: 0;
     transform: scale(0.95);
     background-image: 
-        linear-gradient(var(--bg-secondary), var(--bg-secondary)),
+        linear-gradient(transparent, transparent),
         linear-gradient(135deg, #8B5CF6, #3B82F6, #22D3EE, #3B82F6, #8B5CF6);
     background-origin: border-box;
     background-clip: padding-box, border-box;
