@@ -444,30 +444,32 @@ section {
 
 /* Modern Clean Glass Code Block */
 .code-block-glass {
-    background: rgba(255, 255, 255, 0.01);
-    backdrop-filter: blur(30px) saturate(150%);
-    -webkit-backdrop-filter: blur(30px) saturate(150%);
-    border: none;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(40px) saturate(180%);
+    -webkit-backdrop-filter: blur(40px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 18px;
     padding: 1.5rem 1.5rem 0.25rem 1.5rem;
     font-family: var(--font-mono);
     font-size: 0.875rem;
     position: relative;
     margin: 2rem 0;
+    max-width: 600px;
     box-shadow: 
-        0 0 30px rgba(139, 92, 246, 0.3),
-        0 0 60px rgba(59, 130, 246, 0.2),
-        0 0 90px rgba(34, 211, 238, 0.1);
+        0 8px 32px rgba(0, 0, 0, 0.2),
+        0 2px 12px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-
 .code-block-glass:hover {
-    transform: translateY(-1px);
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
     box-shadow: 
-        0 0 40px rgba(139, 92, 246, 0.5),
-        0 0 80px rgba(59, 130, 246, 0.3),
-        0 0 120px rgba(34, 211, 238, 0.2),
-        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+        0 16px 48px rgba(0, 0, 0, 0.25),
+        0 4px 16px rgba(0, 0, 0, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.25);
 }
 
 .code-block::before {
@@ -561,8 +563,6 @@ section {
 
 .code-line {
     display: block;
-    position: relative;
-    z-index: 1;
 }
 
 .code-comment {
@@ -578,7 +578,7 @@ section {
 }
 
 .code-string {
-    color: #8B4513;
+    color: #DC2626;
 }
 
 .code-number {
@@ -752,33 +752,14 @@ section {
 }
 
 .skill-category {
-    background: rgba(255, 255, 255, 0.03);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    background: var(--bg-secondary);
     padding: 2rem;
-    border-radius: 16px;
+    border-radius: 12px;
+    border: 1px solid var(--border-subtle);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     opacity: 0;
     transform: scale(0.95);
-    box-shadow: 
-        0 0 10px rgba(139, 92, 246, 0.1),
-        0 0 20px rgba(59, 130, 246, 0.08),
-        0 0 30px rgba(34, 211, 238, 0.05);
-}
-
-.skill-category::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    border-radius: 16px;
-    padding: 0.4px;
-    background: linear-gradient(135deg, #8B5CF6, #3B82F6, #22D3EE, #3B82F6, #8B5CF6);
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-    pointer-events: none;
-    z-index: 0;
 }
 
 .skill-category.visible {
@@ -787,11 +768,26 @@ section {
 }
 
 .skill-category:hover {
+    border-color: var(--border-hover);
     transform: translateY(-4px) scale(1);
-    box-shadow: 
-        0 0 15px rgba(139, 92, 246, 0.2),
-        0 0 30px rgba(59, 130, 246, 0.15),
-        0 0 45px rgba(34, 211, 238, 0.1);
+}
+
+.skill-category::before {
+    content: '';
+    position: absolute;
+    inset: -0.5rem;
+    border-radius: 12px;
+    padding: 0.5rem;
+    background: linear-gradient(135deg, var(--glow-purple), var(--glow-blue));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.skill-category:hover::before {
+    opacity: 1;
 }
 
 .skill-category-title {
@@ -806,8 +802,6 @@ section {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
-    position: relative;
-    z-index: 1;
 }
 
 .skill-tag {
@@ -887,9 +881,9 @@ section {
 .speaking-card::before {
     content: '';
     position: absolute;
-    inset: -1px;
+    inset: -0.5rem;
     border-radius: 12px;
-    padding: 1px;
+    padding: 0.5rem;
     background: linear-gradient(135deg, var(--glow-blue), var(--glow-cyan));
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
@@ -977,9 +971,9 @@ section {
 .writing-card::before {
     content: '';
     position: absolute;
-    inset: -1px;
+    inset: -0.5rem;
     border-radius: 12px;
-    padding: 1px;
+    padding: 0.5rem;
     background: linear-gradient(135deg, var(--glow-purple), var(--glow-cyan));
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
@@ -1071,9 +1065,9 @@ section {
 .teaching-card::before {
     content: '';
     position: absolute;
-    inset: -1px;
+    inset: -0.5rem;
     border-radius: 12px;
-    padding: 1px;
+    padding: 0.5rem;
     background: linear-gradient(135deg, var(--glow-blue), var(--glow-cyan));
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
@@ -1204,9 +1198,9 @@ section {
 .contact-card::before {
     content: '';
     position: absolute;
-    inset: -1px;
+    inset: -0.5rem;
     border-radius: 12px;
-    padding: 1px;
+    padding: 0.5rem;
     background: linear-gradient(135deg, var(--glow-purple), var(--glow-cyan));
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
@@ -1406,91 +1400,5 @@ section {
     .code-block {
         font-size: 0.75rem;
         padding: 1rem;
-    }
-}
-
-/* Bio Section */
-.bio {
-    padding: 100px 0;
-    background: var(--bg-primary);
-}
-
-.bio-content {
-    max-width: 800px;
-    margin: 3rem auto 0;
-}
-
-.bio-box {
-    background: rgba(255, 255, 255, 0.03);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 24px;
-    padding: 2rem;
-    position: relative;
-}
-
-.bio-copy-btn {
-    position: absolute;
-    top: 1.5rem;
-    right: 1.5rem;
-    background: none;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-    transition: opacity 0.2s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.bio-copy-btn:hover {
-    opacity: 0.7;
-}
-
-.bio-text {
-    color: #FFFFFF;
-    font-size: 1.125rem;
-    line-height: 1.8;
-    margin-bottom: 1.5rem;
-}
-
-.bio-text:last-child {
-    margin-bottom: 0;
-}
-
-.bio-actions {
-    margin-top: 2.5rem;
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-}
-
-@media (max-width: 768px) {
-    .bio-content {
-        max-width: 100%;
-    }
-    
-    .bio-box {
-        padding: 1.5rem;
-        padding-top: 3rem;
-    }
-    
-    .bio-copy-btn {
-        top: 1rem;
-        right: 1rem;
-    }
-    
-    .bio-text {
-        font-size: 1rem;
-    }
-    
-    .bio-actions {
-        flex-direction: column;
-    }
-    
-    .bio-actions .btn {
-        width: 100%;
-        justify-content: center;
     }
 }
