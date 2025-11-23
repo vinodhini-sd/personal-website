@@ -1084,7 +1084,7 @@ section {
 }
 
 .btn-teaching-secondary {
-    background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
+    background: linear-gradient(135deg, var(--accent-purple), var(--accent-blue));
     color: white;
     border: none;
     font-weight: 600;
@@ -1098,7 +1098,7 @@ section {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
+    background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
     opacity: 0;
     transition: opacity 0.3s ease;
 }
@@ -1109,7 +1109,7 @@ section {
 
 .btn-teaching-secondary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(34, 211, 238, 0.4);
+    box-shadow: 0 8px 24px rgba(139, 92, 246, 0.4);
 }
 
 .btn-teaching-secondary span {
@@ -1124,7 +1124,7 @@ section {
 }
 
 .btn-teaching-tertiary {
-    background: linear-gradient(135deg, #10B981, var(--accent-cyan));
+    background: linear-gradient(135deg, var(--accent-purple), var(--accent-blue));
     color: white;
     border: none;
     font-weight: 600;
@@ -1138,7 +1138,7 @@ section {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, var(--accent-cyan), #10B981);
+    background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
     opacity: 0;
     transition: opacity 0.3s ease;
 }
@@ -1149,7 +1149,7 @@ section {
 
 .btn-teaching-tertiary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(16, 185, 129, 0.4);
+    box-shadow: 0 8px 24px rgba(139, 92, 246, 0.4);
 }
 
 .btn-teaching-tertiary span {
