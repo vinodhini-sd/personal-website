@@ -1216,6 +1216,16 @@ section {
     padding: 2rem;
     padding-right: 5rem;
     position: relative;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.bio-box:hover {
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-4px);
+    box-shadow: 
+        0 0 40px rgba(139, 92, 246, 0.4),
+        0 0 80px rgba(34, 211, 238, 0.3),
+        0 16px 48px rgba(0, 0, 0, 0.4);
 }
 
 .bio-copy-btn {
@@ -1485,14 +1495,13 @@ section {
 }
 
 .testimonial-card::before {
-    content: '"';
+    content: '❝';
     position: absolute;
     top: 1.5rem;
-    left: 2rem;
-    font-size: 4rem;
+    left: 1.5rem;
+    font-size: 3.5rem;
     color: var(--accent-purple);
     opacity: 0.2;
-    font-family: Georgia, serif;
     line-height: 1;
 }
 
@@ -1506,8 +1515,10 @@ section {
 }
 
 .testimonial-quote {
-    font-size: 1.0625rem;
-    color: rgba(255, 255, 255, 0.85);
+    font-family: var(--font-sans);
+    font-size: 1.125rem;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 300;
     line-height: 1.7;
     margin-bottom: 2rem;
     position: relative;
