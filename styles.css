@@ -1014,17 +1014,12 @@ section {
 }
 
 .teaching-hero-title {
-    font-size: 4.5rem;
+    font-size: 3.5rem;
     font-weight: 700;
     line-height: 1.1;
     margin-bottom: 1.5rem;
     letter-spacing: -0.03em;
-    color: #FFFFFF;
-    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
-    background: linear-gradient(135deg, #FFFFFF 0%, rgba(255, 255, 255, 0.85) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--text-primary);
 }
 
 .teaching-hero-subtitle {
@@ -1125,17 +1120,19 @@ section {
 }
 
 .bio-copy-btn svg {
-    stroke: #A78BFA;
-    stroke-width: 3;
+    stroke: #E9D5FF;
+    stroke-width: 3.5;
     fill: none;
-    width: 24px;
-    height: 24px;
+    width: 26px;
+    height: 26px;
     transition: all 0.3s ease;
+    opacity: 0.9;
 }
 
 .bio-copy-btn:hover svg {
-    stroke: #C4B5FD;
-    stroke-width: 3;
+    stroke: #F3E8FF;
+    stroke-width: 3.5;
+    opacity: 1;
 }
 
 .bio-text {
@@ -1537,7 +1534,7 @@ section {
     }
     
     .teaching-hero-title {
-        font-size: 3.5rem;
+        font-size: 3rem;
     }
 }
 
