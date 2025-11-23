@@ -1430,13 +1430,16 @@ section {
 }
 
 .course-reviews-subtitle {
-    font-size: 1.375rem;
-    color: #FFFFFF;
+    font-size: 1.5rem;
+    background: linear-gradient(135deg, #E0E7FF 0%, #DBEAFE 50%, #D1FAE5 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     max-width: 800px;
     margin: 0 auto;
-    line-height: 1.7;
-    font-weight: 500;
-    opacity: 0.95;
+    line-height: 1.6;
+    font-weight: 600;
+    letter-spacing: -0.02em;
 }
 
 /* Carousel Container */
@@ -1802,7 +1805,7 @@ section {
     }
     
     .course-reviews-subtitle {
-        font-size: 1.125rem;
+        font-size: 1.25rem;
     }
     
     .testimonials-carousel {
