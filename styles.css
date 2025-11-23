@@ -1227,24 +1227,18 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
+    color: #FFFFFF;
 }
 
 .bio-copy-btn:hover {
     background: transparent;
+    color: var(--accent-purple);
 }
 
 .bio-copy-btn svg {
-    stroke: #FFFFFF;
-    stroke-width: 3.5;
-    fill: none;
-    width: 26px;
-    height: 26px;
+    width: 24px;
+    height: 24px;
     transition: all 0.3s ease;
-}
-
-.bio-copy-btn:hover svg {
-    stroke: var(--accent-purple);
-    stroke-width: 3.5;
 }
 
 .bio-text {
@@ -1430,16 +1424,13 @@ section {
 }
 
 .course-reviews-subtitle {
-    font-size: 1.5rem;
-    background: linear-gradient(135deg, #E0E7FF 0%, #DBEAFE 50%, #D1FAE5 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    font-size: 1.375rem;
+    color: rgba(255, 255, 255, 0.65);
     max-width: 800px;
     margin: 0 auto;
-    line-height: 1.6;
-    font-weight: 600;
-    letter-spacing: -0.02em;
+    line-height: 1.7;
+    font-weight: 300;
+    letter-spacing: 0em;
 }
 
 /* Carousel Container */
