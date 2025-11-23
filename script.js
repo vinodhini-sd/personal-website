@@ -306,13 +306,14 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Copy bio text to clipboard
-function copyBioText() {
-    const bioText = document.getElementById('bio-text');
+function copyBioText(version) {
+    const bioTextId = version === 'short' ? 'bio-text-short' : 'bio-text-long';
+    const bioText = document.getElementById(bioTextId);
     bioText.select();
     bioText.setSelectionRange(0, 99999); // For mobile devices
     
     navigator.clipboard.writeText(bioText.value).then(() => {
-        const button = document.querySelector('.btn-copy-bio');
+        const button = event.target.closest('.btn-copy-bio');
         const originalHTML = button.innerHTML;
         
         button.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Copied!';

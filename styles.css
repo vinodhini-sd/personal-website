@@ -1411,12 +1411,19 @@ section {
 
 .bio-wrapper {
     max-width: 900px;
-    margin: 3rem auto 5rem;
+    margin: 3rem auto 4rem;
+}
+
+.bio-version-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
 }
 
 .bio-instruction {
     font-size: 1rem;
-    color: var(--text-secondary);
+    color: rgba(255, 255, 255, 0.7);
     margin-bottom: 1.5rem;
     line-height: 1.6;
 }
@@ -1462,16 +1469,20 @@ section {
 
 .bio-textarea {
     width: 100%;
-    min-height: 250px;
+    min-height: 180px;
     padding: 1.5rem;
     background: transparent;
     border: none;
-    color: var(--text-secondary);
+    color: rgba(255, 255, 255, 0.9);
     font-size: 1rem;
     line-height: 1.8;
     font-family: var(--font-sans);
     resize: vertical;
     outline: none;
+}
+
+.bio-textarea-long {
+    min-height: 280px;
 }
 
 /* Photos Section */
