@@ -1159,6 +1159,39 @@ section {
     z-index: 1;
 }
 
+/* Teaching Section Separator */
+.teaching-separator {
+    position: relative;
+    max-width: 600px;
+    margin: 6rem auto 6rem;
+    height: 1px;
+}
+
+.separator-line {
+    position: relative;
+    height: 1px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        rgba(139, 92, 246, 0.4) 25%,
+        rgba(59, 130, 246, 0.6) 50%,
+        rgba(34, 211, 238, 0.4) 75%,
+        transparent 100%);
+}
+
+.separator-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 60px;
+    background: radial-gradient(ellipse at center, 
+        rgba(139, 92, 246, 0.15) 0%,
+        rgba(59, 130, 246, 0.1) 40%,
+        transparent 70%);
+    pointer-events: none;
+}
+
 /* Bio Section */
 .bio {
     padding: 100px 0;
@@ -1201,19 +1234,17 @@ section {
 }
 
 .bio-copy-btn svg {
-    stroke: #E9D5FF;
+    stroke: #FFFFFF;
     stroke-width: 3.5;
     fill: none;
     width: 26px;
     height: 26px;
     transition: all 0.3s ease;
-    opacity: 0.9;
 }
 
 .bio-copy-btn:hover svg {
-    stroke: #F3E8FF;
+    stroke: var(--accent-purple);
     stroke-width: 3.5;
-    opacity: 1;
 }
 
 .bio-text {
@@ -1384,19 +1415,28 @@ section {
 }
 
 .course-reviews-title {
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 700;
     color: var(--text-primary);
     margin-bottom: 1rem;
     letter-spacing: -0.03em;
 }
 
+.gradient-text {
+    background: linear-gradient(135deg, var(--accent-purple) 0%, var(--accent-cyan) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
 .course-reviews-subtitle {
-    font-size: 1.125rem;
-    color: var(--text-secondary);
+    font-size: 1.375rem;
+    color: #FFFFFF;
     max-width: 800px;
     margin: 0 auto;
     line-height: 1.7;
+    font-weight: 500;
+    opacity: 0.95;
 }
 
 /* Carousel Container */
@@ -1611,7 +1651,7 @@ section {
     }
     
     .course-reviews-title {
-        font-size: 2.5rem;
+        font-size: 1.75rem;
     }
     
     .teaching-hero-title {
@@ -1758,11 +1798,11 @@ section {
     }
     
     .course-reviews-title {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
     
     .course-reviews-subtitle {
-        font-size: 1rem;
+        font-size: 1.125rem;
     }
     
     .testimonials-carousel {
