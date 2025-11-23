@@ -305,6 +305,30 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+// Copy bio text to clipboard
+function copyBioText() {
+    const bioContent = document.getElementById('bio-text-content');
+    const paragraphs = bioContent.querySelectorAll('p');
+    const bioText = Array.from(paragraphs).map(p => p.textContent).join('\n\n');
+    
+    navigator.clipboard.writeText(bioText).then(() => {
+        const button = document.querySelector('.bio-copy-btn');
+        const originalHTML = button.innerHTML;
+        
+        button.innerHTML = '<svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="checkGradient" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#10b981;stop-opacity:1" /><stop offset="100%" style="stop-color:#22c55e;stop-opacity:1" /></linearGradient></defs><path d="M20 6L9 17l-5-5" stroke="url(#checkGradient)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+        button.style.background = '';
+        button.style.borderColor = '';
+        
+        setTimeout(() => {
+            button.innerHTML = originalHTML;
+            button.style.background = '';
+            button.style.borderColor = '';
+        }, 2000);
+    }).catch(err => {
+        console.error('Failed to copy bio text: ', err);
+    });
+}
+
 // Console message for developers
 console.log('%c👋 Hi there, developer!', 'color: #8B5CF6; font-size: 20px; font-weight: bold;');
 console.log('%cLike the Linear-style design? Let\'s connect!', 'color: #22D3EE; font-size: 14px;');
