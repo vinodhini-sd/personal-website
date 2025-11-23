@@ -1040,42 +1040,123 @@ section {
 }
 
 .btn-teaching-primary {
-    background: rgba(255, 255, 255, 0.95);
-    color: var(--bg-primary);
-    border: 1px solid rgba(255, 255, 255, 1);
+    background: linear-gradient(135deg, var(--accent-purple), var(--accent-blue));
+    color: white;
+    border: none;
     font-weight: 600;
     padding: 1rem 2rem;
+    position: relative;
+    overflow: hidden;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.btn-teaching-primary::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.btn-teaching-primary:hover::before {
+    opacity: 1;
+}
+
 .btn-teaching-primary:hover {
-    background: rgba(255, 255, 255, 1);
     transform: translateY(-2px);
-    box-shadow: 0 12px 32px rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 24px rgba(139, 92, 246, 0.4);
+}
+
+.btn-teaching-primary span {
+    position: relative;
+    z-index: 1;
 }
 
 .btn-teaching-primary svg {
     margin-left: 0.25rem;
+    position: relative;
+    z-index: 1;
 }
 
 .btn-teaching-secondary {
-    background: transparent;
-    color: var(--text-primary);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
+    color: white;
+    border: none;
     font-weight: 600;
     padding: 1rem 2rem;
+    position: relative;
+    overflow: hidden;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.btn-teaching-secondary::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.btn-teaching-secondary:hover::before {
+    opacity: 1;
+}
+
 .btn-teaching-secondary:hover {
-    background: rgba(255, 255, 255, 0.08);
-    border-color: rgba(255, 255, 255, 0.3);
     transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(139, 92, 246, 0.3);
+    box-shadow: 0 8px 24px rgba(34, 211, 238, 0.4);
+}
+
+.btn-teaching-secondary span {
+    position: relative;
+    z-index: 1;
 }
 
 .btn-teaching-secondary svg {
     margin-left: 0.25rem;
+    position: relative;
+    z-index: 1;
+}
+
+.btn-teaching-tertiary {
+    background: linear-gradient(135deg, #10B981, var(--accent-cyan));
+    color: white;
+    border: none;
+    font-weight: 600;
+    padding: 1rem 2rem;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-teaching-tertiary::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, var(--accent-cyan), #10B981);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.btn-teaching-tertiary:hover::before {
+    opacity: 1;
+}
+
+.btn-teaching-tertiary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(16, 185, 129, 0.4);
+}
+
+.btn-teaching-tertiary span {
+    position: relative;
+    z-index: 1;
+}
+
+.btn-teaching-tertiary svg {
+    margin-left: 0.25rem;
+    position: relative;
+    z-index: 1;
 }
 
 /* Bio Section */

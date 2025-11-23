@@ -335,3 +335,233 @@ console.log('%cLike the Linear-style design? Let\'s connect!', 'color: #22D3EE; 
 console.log('%cLinkedIn: https://www.linkedin.com/in/vinodhini-sd/', 'color: #A0A0A0; font-size: 12px;');
 console.log('%cBuilt with: HTML, CSS, Vanilla JS', 'color: #6B6B6B; font-size: 11px; font-family: monospace;');
 
+// ============================================
+// TESTIMONIALS CAROUSEL FUNCTIONALITY - INFINITE LOOP
+// ============================================
+
+document.addEventListener('DOMContentLoaded', function() {
+    const carousel = document.querySelector('.testimonials-carousel');
+    if (!carousel) return;
+    
+    const track = carousel.querySelector('.testimonials-track');
+    const originalCards = Array.from(track.querySelectorAll('.testimonial-card'));
+    const prevBtn = carousel.querySelector('.carousel-btn-prev');
+    const nextBtn = carousel.querySelector('.carousel-btn-next');
+    const dots = Array.from(document.querySelectorAll('.carousel-dot'));
+    
+    let currentIndex = 0;
+    let autoplayInterval;
+    const autoplayDelay = 3000; // 3 seconds for smoother continuous feel
+    let isTransitioning = false;
+    
+    // Clone cards for infinite loop effect
+    function setupInfiniteLoop() {
+        // Clone first and last sets of cards for seamless looping
+        const firstClones = originalCards.slice(0, 3).map(card => {
+            const clone = card.cloneNode(true);
+            clone.classList.add('clone');
+            return clone;
+        });
+        
+        const lastClones = originalCards.slice(-3).map(card => {
+            const clone = card.cloneNode(true);
+            clone.classList.add('clone');
+            return clone;
+        });
+        
+        // Add clones to track
+        lastClones.forEach(clone => track.insertBefore(clone, track.firstChild));
+        firstClones.forEach(clone => track.appendChild(clone));
+        
+        // Set initial position to first real card (after last clones)
+        currentIndex = 3;
+        updateCarouselPosition(false);
+    }
+    
+    // Calculate how many cards to show at once based on screen size
+    function getCardsPerView() {
+        const width = window.innerWidth;
+        if (width > 1200) return 3;
+        if (width > 768) return 2;
+        return 1;
+    }
+    
+    // Update carousel position
+    function updateCarouselPosition(animated = true) {
+        const allCards = Array.from(track.querySelectorAll('.testimonial-card'));
+        if (allCards.length === 0) return;
+        
+        const cardWidth = allCards[0].offsetWidth;
+        const gap = 32; // 2rem gap
+        const offset = -(currentIndex * (cardWidth + gap));
+        
+        if (animated) {
+            track.style.transition = 'transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)';
+        } else {
+            track.style.transition = 'none';
+        }
+        
+        track.style.transform = `translateX(${offset}px)`;
+        
+        // Update dots (map to original cards only)
+        const realIndex = ((currentIndex - 3) % originalCards.length + originalCards.length) % originalCards.length;
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === realIndex);
+        });
+    }
+    
+    // Go to specific slide with infinite loop logic
+    function goToSlide(index, animated = true) {
+        if (isTransitioning) return;
+        
+        isTransitioning = true;
+        currentIndex = index;
+        updateCarouselPosition(animated);
+        
+        setTimeout(() => {
+            handleInfiniteLoop();
+            isTransitioning = false;
+        }, animated ? 500 : 0);
+    }
+    
+    // Handle infinite loop transition
+    function handleInfiniteLoop() {
+        const allCards = Array.from(track.querySelectorAll('.testimonial-card'));
+        const totalCards = allCards.length;
+        
+        // If we're at a cloned card, jump to the real equivalent
+        if (currentIndex <= 2) {
+            // At the beginning clones, jump to end real cards
+            currentIndex = originalCards.length + 2 + (currentIndex - 2);
+            updateCarouselPosition(false);
+        } else if (currentIndex >= totalCards - 3) {
+            // At the end clones, jump to beginning real cards
+            currentIndex = 3 + (currentIndex - (totalCards - 3));
+            updateCarouselPosition(false);
+        }
+    }
+    
+    // Previous slide
+    function prevSlide() {
+        if (isTransitioning) return;
+        goToSlide(currentIndex - 1);
+        resetAutoplay();
+    }
+    
+    // Next slide
+    function nextSlide() {
+        if (isTransitioning) return;
+        goToSlide(currentIndex + 1);
+        resetAutoplay();
+    }
+    
+    // Go to specific dot
+    function goToDot(dotIndex) {
+        if (isTransitioning) return;
+        // Map dot index to track index (offset by 3 for clones)
+        goToSlide(dotIndex + 3);
+        resetAutoplay();
+    }
+    
+    // Autoplay functionality
+    function startAutoplay() {
+        autoplayInterval = setInterval(nextSlide, autoplayDelay);
+    }
+    
+    function stopAutoplay() {
+        if (autoplayInterval) {
+            clearInterval(autoplayInterval);
+        }
+    }
+    
+    function resetAutoplay() {
+        stopAutoplay();
+        startAutoplay();
+    }
+    
+    // Event listeners
+    prevBtn.addEventListener('click', prevSlide);
+    nextBtn.addEventListener('click', nextSlide);
+    
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => goToDot(index));
+    });
+    
+    // Pause autoplay on hover
+    carousel.addEventListener('mouseenter', stopAutoplay);
+    carousel.addEventListener('mouseleave', startAutoplay);
+    
+    // Handle window resize
+    let resizeTimeout;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(() => {
+            updateCarouselPosition(false);
+        }, 200);
+    });
+    
+    // Touch/swipe support for mobile
+    let touchStartX = 0;
+    let touchEndX = 0;
+    
+    track.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+        stopAutoplay();
+    });
+    
+    track.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+        startAutoplay();
+    });
+    
+    function handleSwipe() {
+        const swipeThreshold = 50;
+        const diff = touchStartX - touchEndX;
+        
+        if (Math.abs(diff) > swipeThreshold) {
+            if (diff > 0) {
+                nextSlide();
+            } else {
+                prevSlide();
+            }
+        }
+    }
+    
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') {
+            prevSlide();
+        } else if (e.key === 'ArrowRight') {
+            nextSlide();
+        }
+    });
+    
+    // Initialize infinite loop
+    setupInfiniteLoop();
+    startAutoplay();
+    
+    // Intersection Observer for animation on scroll
+    const reviewsObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                originalCards.forEach((card, index) => {
+                    card.style.opacity = '0';
+                    card.style.transform = 'translateY(30px)';
+                    setTimeout(() => {
+                        card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                        card.style.opacity = '1';
+                        card.style.transform = 'translateY(0)';
+                    }, index * 150);
+                });
+                reviewsObserver.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    });
+    
+    reviewsObserver.observe(carousel);
+});
+
