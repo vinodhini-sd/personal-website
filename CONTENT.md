@@ -262,6 +262,28 @@ Let's Build Something Amazing
 
 ---
 
+## 9. BIO PAGE
+
+**Short Bio (50 words) - For quick introductions:**
+```
+Vino Duraisamy is a Developer Advocate at Snowflake with a decade of experience building enterprise-scale data and AI products. She specializes in helping developers transform ambitious ideas into production-ready solutions through technical advocacy, education, and open-source contributions.
+```
+
+**Long Bio (150 words) - For conference programs and detailed bios:**
+```
+Vino Duraisamy is a Developer Advocate at Snowflake, where she empowers developers to build scalable data and AI solutions. With over 10 years of experience across retail, legal, and big tech companies, Vino has architected enterprise-grade data platforms and ML systems that serve millions of users.
+
+As a passionate advocate for developers, Vino bridges the gap between complex technology and practical implementation through speaking engagements, technical writing, and open-source contributions. She specializes in data engineering, machine learning operations, and developer experience.
+
+Vino holds a Master's degree in Business Analytics from Arizona State University (Summa Cum Laude) and a Bachelor's in Electronics and Communications from PSG College of Technology. She is a frequent speaker at conferences and meetups, sharing insights on AI engineering, data platforms, and building developer-first products.
+```
+
+**Files Needed:**
+- CV/Resume: Upload your PDF to `assets/cv/Vino_Duraisamy_CV.pdf`
+- Headshot: Your current headshot is at `assets/images/vino.JPG` (can be replaced with higher resolution if needed)
+
+---
+
 ## NOTES:
 - Fill in all sections with your content
 - Keep descriptions concise and impactful
