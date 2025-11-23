@@ -1443,7 +1443,7 @@ section {
 }
 
 .bio-copy-btn svg {
-    stroke: #A78BFA;
+    stroke: #22D3EE !important;
     stroke-width: 3;
     width: 28px;
     height: 28px;
