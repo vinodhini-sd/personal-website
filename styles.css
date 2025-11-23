@@ -1091,10 +1091,10 @@ section {
     position: absolute;
     top: 1.5rem;
     right: 1.5rem;
-    background: transparent;
-    border: none;
-    border-radius: 8px;
-    padding: 0.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    padding: 0.75rem;
     cursor: pointer;
     transition: all 0.3s ease;
     display: flex;
@@ -1103,19 +1103,22 @@ section {
 }
 
 .bio-copy-btn:hover {
-    background: transparent;
+    background: rgba(139, 92, 246, 0.2);
+    border-color: var(--accent-purple);
 }
 
 .bio-copy-btn svg {
-    stroke: var(--accent-purple);
-    stroke-width: 2.5;
+    stroke: #22D3EE;
+    stroke-width: 3;
     fill: none;
+    width: 24px;
+    height: 24px;
     transition: all 0.3s ease;
 }
 
 .bio-copy-btn:hover svg {
-    stroke: var(--accent-cyan);
-    stroke-width: 2.5;
+    stroke: #FFFFFF;
+    stroke-width: 3;
 }
 
 .bio-text {
