@@ -721,11 +721,10 @@ section {
 .timeline-description {
     font-family: var(--font-sans);
     font-size: 1.125rem;
-    color: #A5F3FC;
+    color: rgba(255, 255, 255, 0.7);
     line-height: 1.7;
     margin: 0;
     font-weight: 300;
-    text-shadow: 0 0 20px rgba(34, 211, 238, 0.3);
 }
 
 /* Skills Section */
@@ -1028,14 +1027,13 @@ section {
 .teaching-hero-subtitle {
     font-family: var(--font-sans);
     font-size: 1.125rem;
-    color: #A5F3FC;
+    color: rgba(255, 255, 255, 0.7);
     line-height: 1.7;
     margin-bottom: 3rem;
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
     font-weight: 300;
-    text-shadow: 0 0 20px rgba(34, 211, 238, 0.3);
 }
 
 .teaching-hero-buttons {
@@ -1233,7 +1231,7 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #A78BFA;
+    color: var(--accent-purple);
 }
 
 .bio-copy-btn:hover {
@@ -1253,11 +1251,10 @@ section {
 .bio-text {
     font-family: var(--font-sans);
     font-size: 1.125rem;
-    color: #A5F3FC;
+    color: rgba(255, 255, 255, 0.7);
     line-height: 1.7;
     margin-bottom: 1.5rem;
     font-weight: 300;
-    text-shadow: 0 0 20px rgba(34, 211, 238, 0.3);
 }
 
 .bio-text:last-child {
@@ -1314,13 +1311,12 @@ section {
 .contact-description {
     font-family: var(--font-sans);
     font-size: 1.125rem;
-    color: #A5F3FC;
+    color: rgba(255, 255, 255, 0.7);
     text-align: center;
     max-width: 600px;
     margin: 0 auto 3rem;
     line-height: 1.7;
     font-weight: 300;
-    text-shadow: 0 0 20px rgba(34, 211, 238, 0.3);
 }
 
 .contact-methods {
@@ -1441,12 +1437,11 @@ section {
 .course-reviews-subtitle {
     font-family: var(--font-sans);
     font-size: 1.125rem;
-    color: #A5F3FC;
+    color: rgba(255, 255, 255, 0.7);
     max-width: 800px;
     margin: 0 auto;
     line-height: 1.7;
     font-weight: 300;
-    text-shadow: 0 0 20px rgba(34, 211, 238, 0.3);
 }
 
 /* Carousel Container */
