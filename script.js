@@ -315,9 +315,9 @@ function copyBioText() {
         const button = document.querySelector('.bio-copy-btn');
         const originalHTML = button.innerHTML;
         
-        button.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
-        button.style.background = 'rgba(34, 197, 94, 0.2)';
-        button.style.borderColor = '#22c55e';
+        button.innerHTML = '<svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 6L9 17l-5-5" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+        button.style.background = '';
+        button.style.borderColor = '';
         
         setTimeout(() => {
             button.innerHTML = originalHTML;

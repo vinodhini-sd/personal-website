@@ -1442,14 +1442,6 @@ section {
     opacity: 0.7;
 }
 
-.bio-copy-btn svg {
-    stroke: #22D3EE !important;
-    stroke-width: 3;
-    width: 28px;
-    height: 28px;
-    fill: none;
-}
-
 .bio-text {
     color: #FFFFFF;
     font-size: 1.125rem;
