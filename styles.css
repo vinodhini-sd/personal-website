@@ -453,9 +453,8 @@ section {
     font-size: 0.875rem;
     position: relative;
     margin: 2rem 0;
-    background: rgba(0, 0, 0, 0.3);
     background-image: 
-        linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        linear-gradient(rgba(139, 92, 246, 0.04), rgba(139, 92, 246, 0.04)),
         linear-gradient(135deg, #8B5CF6, #3B82F6, #22D3EE, #3B82F6, #8B5CF6);
     background-origin: border-box;
     background-clip: padding-box, border-box;
