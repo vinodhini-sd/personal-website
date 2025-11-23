@@ -419,24 +419,54 @@
     <section id="bio" class="bio-section">
         <div class="container">
             <span class="section-label">About</span>
-            <h2 class="section-title">Bio</h2>
-            <div class="bio-content-wrapper">
-                <div class="bio-text-content">
-                    <p>Vino Duraisamy is a Developer Advocate at Snowflake, where she empowers developers to build scalable data and AI solutions. With over 10 years of experience across retail, legal, and big tech companies, Vino has architected enterprise-grade data platforms and ML systems that serve millions of users.</p>
-                    <p>As a passionate advocate for developers, Vino bridges the gap between complex technology and practical implementation through speaking engagements, technical writing, and open-source contributions. She specializes in data engineering, machine learning operations, and developer experience. Vino holds a Master's degree in Business Analytics from Arizona State University (Summa Cum Laude) and a Bachelor's in Electronics and Communications from PSG College of Technology.</p>
+            <h2 class="section-title">Full Biography</h2>
+            
+            <!-- Bio Text Area -->
+            <div class="bio-wrapper">
+                <p class="bio-instruction">The text below can be copied and pasted for use in promoting an event Vino is presenting at.</p>
+                
+                <div class="bio-text-box">
+                    <div class="bio-copy-header">
+                        <button class="btn-copy-bio" onclick="copyBioText()">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="9" y="9" width="13" height="13" rx="2" stroke="currentColor" stroke-width="2"/>
+                                <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                            Copy Bio
+                        </button>
+                    </div>
+                    <textarea id="bio-text" readonly class="bio-textarea">Vino Duraisamy is a Developer Advocate at Snowflake, where she empowers developers to build scalable data and AI solutions. With over 10 years of experience across retail, legal, and big tech companies, Vino has architected enterprise-grade data platforms and ML systems that serve millions of users.
+
+As a passionate advocate for developers, Vino bridges the gap between complex technology and practical implementation through speaking engagements, technical writing, and open-source contributions. She specializes in data engineering, machine learning operations, and developer experience.
+
+Vino holds a Master's degree in Business Analytics from Arizona State University (Summa Cum Laude) and a Bachelor's in Electronics and Communications from PSG College of Technology. She is a frequent speaker at conferences and meetups, sharing insights on AI engineering, data platforms, and building developer-first products.</textarea>
                 </div>
-                <div class="bio-downloads">
-                    <a href="assets/images/vino.JPG" download class="btn btn-download">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                        Download Headshot
+            </div>
+
+            <!-- Photos Section -->
+            <div class="bio-photos-section">
+                <h2 class="section-title">Photos of Vino</h2>
+                <p class="bio-instruction">The following photos can be used for publication. Click to download.</p>
+                
+                <div class="bio-photos-grid">
+                    <a href="assets/images/vino.JPG" download class="bio-photo-card">
+                        <img src="assets/images/vino.JPG" alt="Vino Duraisamy - Professional Headshot">
+                        <div class="bio-photo-overlay">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Download</span>
+                        </div>
                     </a>
+                </div>
+
+                <!-- CV Download -->
+                <div class="bio-cv-download">
                     <a href="assets/cv/Vino_Duraisamy_CV.pdf" download class="btn btn-download">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
-                        Download CV
+                        Download CV / Resume
                     </a>
                 </div>
             </div>

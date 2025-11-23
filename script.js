@@ -305,6 +305,32 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+// Copy bio text to clipboard
+function copyBioText() {
+    const bioText = document.getElementById('bio-text');
+    bioText.select();
+    bioText.setSelectionRange(0, 99999); // For mobile devices
+    
+    navigator.clipboard.writeText(bioText.value).then(() => {
+        const button = document.querySelector('.btn-copy-bio');
+        const originalHTML = button.innerHTML;
+        
+        button.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Copied!';
+        button.style.background = 'rgba(34, 197, 94, 0.1)';
+        button.style.borderColor = 'rgba(34, 197, 94, 0.3)';
+        button.style.color = '#22c55e';
+        
+        setTimeout(() => {
+            button.innerHTML = originalHTML;
+            button.style.background = '';
+            button.style.borderColor = '';
+            button.style.color = '';
+        }, 2000);
+    }).catch(err => {
+        console.error('Failed to copy text: ', err);
+    });
+}
+
 // Console message for developers
 console.log('%c👋 Hi there, developer!', 'color: #8B5CF6; font-size: 20px; font-weight: bold;');
 console.log('%cLike the Linear-style design? Let\'s connect!', 'color: #22D3EE; font-size: 14px;');
