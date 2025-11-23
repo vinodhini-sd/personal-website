@@ -307,13 +307,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Copy bio text to clipboard
 function copyBioText(version) {
-    const bioTextId = version === 'short' ? 'bio-text-short' : 'bio-text-long';
-    const bioText = document.getElementById(bioTextId);
-    bioText.select();
-    bioText.setSelectionRange(0, 99999); // For mobile devices
+    const bioTextId = version === 'short' ? 'bio-short-text' : 'bio-long-text';
+    const bioElement = document.getElementById(bioTextId);
+    let textToCopy = '';
     
-    navigator.clipboard.writeText(bioText.value).then(() => {
-        const button = event.target.closest('.btn-copy-bio');
+    if (bioElement.tagName === 'P') {
+        // For short bio (single paragraph)
+        textToCopy = bioElement.textContent;
+    } else {
+        // For long bio (multiple paragraphs)
+        const paragraphs = bioElement.querySelectorAll('p');
+        textToCopy = Array.from(paragraphs).map(p => p.textContent).join('\n\n');
+    }
+    
+    navigator.clipboard.writeText(textToCopy).then(() => {
+        const button = event.target.closest('.btn-copy');
         const originalHTML = button.innerHTML;
         
         button.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Copied!';
