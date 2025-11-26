@@ -617,10 +617,10 @@ section {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: 70% 35%;
+    object-position: 15% 35% !important;
     opacity: 0.9;
     transition: opacity 0.5s ease;
-    transform: scale(1.8);
+    transform: scale(1.8) !important;
 }
 
 .image-card:hover .card-image {
