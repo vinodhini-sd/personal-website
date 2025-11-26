@@ -2235,7 +2235,7 @@ section {
 
 @media (max-width: 640px) {
     .hero {
-        background-image: url('assets/images/vino_cropped.jpg');
+        background-image: url('assets/images/vino_cropped.JPG');
         background-size: cover;
         background-position: 20% center;
     }
@@ -2353,8 +2353,12 @@ section {
         padding: 0.75rem 1.5rem;
     }
     
-    .hero-buttons .btn {
+    .hero-buttons .btn:not(.btn-gradient) {
         width: auto;
+    }
+    
+    .hero-buttons .btn-gradient {
+        flex-shrink: 0;
     }
 
     .code-block {
