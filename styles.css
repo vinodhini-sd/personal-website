@@ -1996,6 +1996,12 @@ section {
         justify-content: center;
     }
     
+    .btn-gradient svg path,
+    .btn-gradient svg circle {
+        fill: white !important;
+        stroke: none !important;
+    }
+    
     .writing-grid-two {
         grid-template-columns: 1fr;
     }
@@ -2283,6 +2289,12 @@ section {
         justify-content: center;
     }
     
+    .btn-gradient svg path,
+    .btn-gradient svg circle {
+        fill: white !important;
+        stroke: none !important;
+    }
+    
 }
 
 @media (max-width: 480px) {
@@ -2349,6 +2361,17 @@ section {
     .btn-gradient {
         width: 48px;
         height: 48px;
+    }
+    
+    .btn-gradient svg {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .btn-gradient svg path,
+    .btn-gradient svg circle {
+        fill: white !important;
+        stroke: white !important;
     }
 
     .section-title {
