@@ -1906,7 +1906,7 @@ section {
     .hero {
         height: 100vh;
         min-height: 100vh;
-        background-image: url('assets/images/vino_cropped.jpg');
+        background-image: url('assets/images/vino_cropped.JPG');
         background-size: cover;
         background-position: 20% center;
         background-repeat: no-repeat;
@@ -2040,7 +2040,7 @@ section {
     .hero {
         height: 100vh;
         padding-top: 70px;
-        background-image: url('assets/images/vino_cropped.jpg');
+        background-image: url('assets/images/vino_cropped.JPG');
         background-size: cover;
         background-position: 20% center;
     }
@@ -2285,7 +2285,7 @@ section {
     }
     
     .hero {
-        background-image: url('assets/images/vino_cropped.jpg');
+        background-image: url('assets/images/vino_cropped.JPG');
         background-size: cover;
         background-position: 20% center;
     }
