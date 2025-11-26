@@ -1427,10 +1427,10 @@ section {
     border: none;
     position: relative;
     overflow: hidden;
-    padding: 1rem;
-    border-radius: 12px;
-    width: 56px;
-    height: 56px;
+    padding: 1.5rem;
+    border-radius: 16px;
+    width: 80px;
+    height: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1444,7 +1444,7 @@ section {
     background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
     opacity: 0;
     transition: opacity 0.3s ease;
-    border-radius: 12px;
+    border-radius: 16px;
 }
 
 .btn-contact-icon:hover::before {
@@ -1459,6 +1459,12 @@ section {
 .btn-contact-icon svg {
     position: relative;
     z-index: 1;
+    display: block;
+    width: 32px;
+    height: 32px;
+    color: white;
+    stroke: currentColor;
+    fill: currentColor;
 }
 
 /* Footer */
