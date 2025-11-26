@@ -450,15 +450,17 @@ section {
 
 .btn-gradient svg {
     position: relative;
-    z-index: 1;
+    z-index: 10;
     display: block;
     width: 24px;
     height: 24px;
+    pointer-events: none;
 }
 
 .btn-gradient svg path,
 .btn-gradient svg circle {
-    fill: white !important;
+    fill: #ffffff !important;
+    stroke: none !important;
 }
 
 .btn-gradient-rect {
@@ -2001,9 +2003,13 @@ section {
         justify-content: center;
     }
     
+    .btn-gradient svg {
+        z-index: 10 !important;
+    }
+    
     .btn-gradient svg path,
     .btn-gradient svg circle {
-        fill: white !important;
+        fill: #ffffff !important;
         stroke: none !important;
     }
     
@@ -2294,9 +2300,13 @@ section {
         justify-content: center;
     }
     
+    .btn-gradient svg {
+        z-index: 10 !important;
+    }
+    
     .btn-gradient svg path,
     .btn-gradient svg circle {
-        fill: white !important;
+        fill: #ffffff !important;
         stroke: none !important;
     }
     
@@ -2371,11 +2381,12 @@ section {
     .btn-gradient svg {
         width: 20px;
         height: 20px;
+        z-index: 10 !important;
     }
     
     .btn-gradient svg path,
     .btn-gradient svg circle {
-        fill: white !important;
+        fill: #ffffff !important;
         stroke: none !important;
     }
 
