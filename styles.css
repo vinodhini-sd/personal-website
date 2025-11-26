@@ -451,6 +451,11 @@ section {
 .btn-gradient svg {
     position: relative;
     z-index: 1;
+    display: block;
+    width: 20px;
+    height: 20px;
+    color: white;
+    fill: currentColor;
 }
 
 .btn-gradient-rect {
