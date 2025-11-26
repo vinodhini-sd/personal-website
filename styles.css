@@ -452,10 +452,8 @@ section {
     position: relative;
     z-index: 1;
     display: block;
-    width: 20px;
-    height: 20px;
-    color: white;
-    fill: currentColor;
+    width: 24px;
+    height: 24px;
 }
 
 .btn-gradient-rect {
