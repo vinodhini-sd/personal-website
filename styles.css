@@ -1906,9 +1906,9 @@ section {
     .hero {
         height: 100vh;
         min-height: 100vh;
-        background-image: url('assets/images/vino.JPG');
-        background-size: auto 170%;
-        background-position: 25% 45%;
+        background-image: url('assets/images/vino_cropped.jpg');
+        background-size: cover;
+        background-position: 20% center;
         background-repeat: no-repeat;
         position: relative;
     }
@@ -1939,12 +1939,13 @@ section {
     
     .hero-content {
         width: 100%;
-        padding: 6rem 2rem 4rem 3rem;
-        text-align: right;
+        padding: 7rem 2rem 3rem 2rem;
+        text-align: center;
         display: flex;
         flex-direction: column;
-        align-items: flex-end;
+        align-items: center;
         justify-content: flex-start;
+        min-height: calc(100vh - 70px);
     }
     
     .hero-image {
@@ -1954,24 +1955,25 @@ section {
     .hero-name {
         font-size: 2rem;
         text-shadow: 0 2px 20px rgba(0, 0, 0, 0.8);
-        margin-bottom: 1rem;
+        margin-bottom: 0.5rem;
     }
     
     .hero-label {
         text-shadow: 0 1px 10px rgba(0, 0, 0, 0.8);
-        margin-bottom: 3rem;
+        margin-bottom: 0;
     }
     
     .hero-title {
         font-size: 3rem;
         text-shadow: 0 2px 20px rgba(0, 0, 0, 0.8);
-        margin-bottom: 3.5rem;
+        margin-bottom: 1.5rem;
+        margin-top: auto;
     }
     
     .animated-text {
         width: 300px;
-        margin: 0;
-        text-align: right;
+        margin: 0 auto;
+        text-align: center;
     }
     
     .code-block {
@@ -1981,11 +1983,11 @@ section {
     .hero-description {
         max-width: 100%;
         text-shadow: 0 1px 10px rgba(0, 0, 0, 0.8);
-        margin-bottom: 2.5rem;
+        margin-bottom: 1.5rem;
     }
     
     .hero-buttons {
-        justify-content: flex-end;
+        justify-content: center;
     }
     
     .writing-grid-two {
@@ -2038,8 +2040,9 @@ section {
     .hero {
         height: 100vh;
         padding-top: 70px;
-        background-size: auto 170%;
-        background-position: 25% 45%;
+        background-image: url('assets/images/vino_cropped.jpg');
+        background-size: cover;
+        background-position: 20% center;
     }
     
     .hero::before {
@@ -2053,39 +2056,41 @@ section {
     }
     
     .hero-content {
-        padding: 5rem 2rem 3rem 2rem;
-        text-align: right;
+        padding: 6rem 2rem 2.5rem 2rem;
+        text-align: center;
         display: flex;
         flex-direction: column;
-        align-items: flex-end;
+        align-items: center;
         justify-content: flex-start;
+        min-height: calc(100vh - 70px);
     }
     
     .hero-name {
         font-size: 1.75rem;
         text-shadow: 0 2px 20px rgba(0, 0, 0, 0.9);
-        margin-bottom: 1rem;
+        margin-bottom: 0.5rem;
     }
     
     .hero-label {
-        margin-bottom: 2.5rem;
+        margin-bottom: 0;
     }
 
     .hero-title {
         font-size: 2.5rem;
         text-shadow: 0 2px 20px rgba(0, 0, 0, 0.9);
-        margin-bottom: 3rem;
+        margin-bottom: 1.5rem;
+        margin-top: auto;
     }
     
     .animated-text {
         width: 250px;
-        margin: 0;
-        text-align: right;
+        margin: 0 auto;
+        text-align: center;
     }
     
     .hero-description {
         font-size: 1rem;
-        margin-bottom: 2.5rem;
+        margin-bottom: 1.5rem;
         text-shadow: 0 1px 12px rgba(0, 0, 0, 0.9);
     }
     
@@ -2094,7 +2099,7 @@ section {
     }
     
     .hero-buttons {
-        justify-content: flex-end;
+        justify-content: center;
     }
 
     .section-title {
@@ -2230,43 +2235,46 @@ section {
 
 @media (max-width: 640px) {
     .hero {
-        background-size: auto 180%;
-        background-position: 25% 45%;
+        background-image: url('assets/images/vino_cropped.jpg');
+        background-size: cover;
+        background-position: 20% center;
     }
     
     .hero-content {
-        padding: 4.5rem 2rem 2rem 2rem;
-        text-align: right;
-        align-items: flex-end;
+        padding: 5.5rem 2rem 2rem 2rem;
+        text-align: center;
+        align-items: center;
         justify-content: flex-start;
+        min-height: calc(100vh - 70px);
     }
     
     .hero-name {
         font-size: 1.6rem;
-        margin-bottom: 0.875rem;
+        margin-bottom: 0.5rem;
     }
     
     .hero-label {
-        margin-bottom: 2.25rem;
+        margin-bottom: 0;
     }
     
     .hero-title {
         font-size: 2.25rem;
-        margin-bottom: 2.75rem;
+        margin-bottom: 1.5rem;
+        margin-top: auto;
     }
     
     .animated-text {
         width: 220px;
-        margin: 0;
-        text-align: right;
+        margin: 0 auto;
+        text-align: center;
     }
     
     .hero-description {
-        margin-bottom: 2.25rem;
+        margin-bottom: 1.5rem;
     }
     
     .hero-buttons {
-        justify-content: flex-end;
+        justify-content: center;
     }
     
 }
@@ -2277,8 +2285,9 @@ section {
     }
     
     .hero {
-        background-size: auto 190%;
-        background-position: 25% 45%;
+        background-image: url('assets/images/vino_cropped.jpg');
+        background-size: cover;
+        background-position: 20% center;
     }
     
     .hero::before {
@@ -2292,41 +2301,43 @@ section {
     }
     
     .hero-content {
-        padding: 4rem 1.5rem 2rem 1.5rem;
-        text-align: right;
-        align-items: flex-end;
+        padding: 5rem 1.5rem 1.5rem 1.5rem;
+        text-align: center;
+        align-items: center;
         justify-content: flex-start;
+        min-height: calc(100vh - 70px);
     }
     
     .hero-name {
         font-size: 1.5rem;
-        margin-bottom: 0.75rem;
+        margin-bottom: 0.5rem;
     }
 
     .hero-title {
         font-size: 2rem;
-        margin-bottom: 2.5rem;
+        margin-bottom: 1.5rem;
+        margin-top: auto;
     }
     
     .animated-text {
         width: 180px;
-        margin: 0;
-        text-align: right;
+        margin: 0 auto;
+        text-align: center;
     }
     
     .hero-label {
         font-size: 0.8rem;
-        margin-bottom: 2rem;
+        margin-bottom: 0;
     }
     
     .hero-description {
         font-size: 0.95rem;
-        margin-bottom: 2rem;
+        margin-bottom: 1.5rem;
     }
     
     .hero-buttons {
         gap: 0.75rem;
-        justify-content: flex-end;
+        justify-content: center;
     }
     
     .btn-gradient {
