@@ -456,6 +456,11 @@ section {
     height: 24px;
 }
 
+.btn-gradient svg path,
+.btn-gradient svg circle {
+    fill: white !important;
+}
+
 .btn-gradient-rect {
     background: linear-gradient(135deg, var(--accent-purple), var(--accent-blue));
     color: white;
