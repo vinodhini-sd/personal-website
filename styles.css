@@ -2376,7 +2376,7 @@ section {
     .btn-gradient svg path,
     .btn-gradient svg circle {
         fill: white !important;
-        stroke: white !important;
+        stroke: none !important;
     }
 
     .section-title {
